@@ -109,30 +109,35 @@ To get a flicker-free scrolling, 2 independent sprites are used.
 
 The settings are in ytGraph.h<br><br>
 <img  src="./docs/graph_schemata.png" alt="Project logo"></a><br><br>
-(1)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_X_LEFT_POS 40<br>
-(2)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_Y_BOTTOM_POS 150<br>
-(3)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_WIDTH 240 <br>
-(4)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_HEIGHT 120<br>
 
-(1)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define SPRITE_LEFT_X GRAPH_X_LEFT_POS<br>
-(7)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define SPRITE_UPPER_Y (GRAPH_Y_BOTTOM_POS - GRAPH_HEIGHT)<br>
-(3)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define SPRITE_WIDTH GRAPH_WIDTH + 1<br>
-(4)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define SPRITE_HEIGTH GRAPH_HEIGHT + 2<br>
+```c++
+#define GRAPH_X_LEFT_POS 40                                   // (1)	
+#define GRAPH_Y_BOTTOM_POS 150                                // (2)
+#define GRAPH_WIDTH 240                                       // (3)
+#define GRAPH_HEIGHT 120                                      // (4)
 
-(5)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define X_AXIS_WIDTH SPRITE_WIDTH + 50<br>
-(6)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define X_AXIS_HEIGTH 15<br>
-(8)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define X_AXIS_LEFT_X GRAPH_X_LEFT_POS - 10<br>
-(2)	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define X_AXIS_UPPER_Y GRAPH_Y_BOTTOM_POS + 4<br>
+#define SPRITE_LEFT_X GRAPH_X_LEFT_POS                        // (1)
+#define SPRITE_UPPER_Y (GRAPH_Y_BOTTOM_POS - GRAPH_HEIGHT)    // (7)
+#define SPRITE_WIDTH GRAPH_WIDTH + 1                          // (3)
+#define SPRITE_HEIGTH GRAPH_HEIGHT + 2                        // (4)
 
-(11) &nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_Y_AXIS_MIN 0.0<br>
-(10)	&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_Y_AXIS_MAX 60.0<br>
-(9)	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_Y_DIV 10<br>
+#define X_AXIS_WIDTH SPRITE_WIDTH + 50                        // (5)
+#define X_AXIS_HEIGTH 15                                      // (6)
+#define X_AXIS_LEFT_X GRAPH_X_LEFT_POS - 10                   // (8)
+#define X_AXIS_UPPER_Y GRAPH_Y_BOTTOM_POS + 4                 // (2)
 
-(same procedure at x-axis:)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_X_AXIS_MIN 0<br>
-+) &nbsp;#define GRAPH_X_AXIS_MAX (SAMPLE_COUNT * SAMPLE_RATE)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#define GRAPH_X_DIV 5<br><br>
-*+) The last value of the x-axis is calculated with:&nbsp;&nbsp;samples * rate (e.g. 60 samples * 5 sec = 300 sec)* <br>
+#define GRAPH_Y_AXIS_MIN 0.0                                 // (11)
+#define GRAPH_Y_AXIS_MAX 60.0                                // (10)
+#define GRAPH_Y_DIV 10                                       // (9)
+
+//(same procedure at x-axis:)
+#define GRAPH_X_AXIS_MIN 0
+#define GRAPH_X_AXIS_MAX (SAMPLE_COUNT * SAMPLE_RATE) // (*)
+#define GRAPH_X_DIV 5
+// *) The last value of the x-axis is calculated with:&nbsp;&nbsp;samples * rate (e.g. 60 samples * 5 sec = 300 sec)
+```
+
+
 <br>
 <br>
 
