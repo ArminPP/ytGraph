@@ -134,7 +134,7 @@ The settings are in ytGraph.h<br><br>
 #define GRAPH_X_AXIS_MIN 0
 #define GRAPH_X_AXIS_MAX (SAMPLE_COUNT * SAMPLE_RATE) // (*)
 #define GRAPH_X_DIV 5
-// *) The last value of the x-axis is calculated with:&nbsp;&nbsp;samples * rate (e.g. 60 samples * 5 sec = 300 sec)
+// *) The last value of the x-axis is calculated with:   samples * rate   (e.g. 60 samples * 5 sec = 300 sec)
 ```
 
 
